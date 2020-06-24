@@ -1,21 +1,20 @@
 # E-commerce Application
 
-A new e-commerce project.
-
 DESCRIPTION
-Hey 👋
-
-I recently started with an E-commerce App and decided to share my exploration. I tried to make it sleek and according to latest design trends.
+Hi 👋 I recently started with an E-commerce App and decided to share my exploration. I tried to make it sleek and according to latest design trends.
 
 ❤ ️Design Taken from:
 https://dribbble.com/desinnstudio
+![alt text](https://github.com/ishaileshmishra/jin_ecomm/blob/master/assets/srcn/design.png?raw=true)
 
 🥇Follow me on Twitter:
 https://www.twitter.com/ishailesmishra
 
-### design inspiration:
+### design:
 
-![alt text](https://github.com/ishaileshmishra/jin_ecomm/blob/master/assets/srcn/design.png?raw=true)
+![alt text](https://github.com/ishaileshmishra/jin_ecomm/blob/master/assets/srcn/screen1.png?raw=true)
+
+
 
 
 
