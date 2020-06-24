@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:jin_ecomm/src/model/Product.dart';
+import 'package:jin_ecomm/src/utils/resource.dart';
 import 'package:jin_ecomm/src/utils/text_util.dart';
+import 'package:flutter_rating_bar/flutter_rating_bar.dart';
+import 'package:jin_ecomm/src/view/product_cart.dart';
 
 class ProductDetail extends StatelessWidget {
   ProductDetail({Key key, this.product}) : super(key: key);
@@ -20,8 +23,11 @@ class ProductDetail extends StatelessWidget {
         centerTitle: true,
         actions: [
           Padding(
-              padding: EdgeInsets.only(right: 10),
-              child: Icon(Icons.add_shopping_cart, size: 30,),
+            padding: EdgeInsets.only(right: 10),
+            child: Icon(
+              Icons.add_shopping_cart,
+              size: 30,
+            ),
           )
         ],
       ),
@@ -49,33 +55,46 @@ class ProductDetail extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    //SizedBox(height: 20),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text("\$${product.price}", style: largeText),
-                        RaisedButton(
-                          shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(18.0),
-                              //side: BorderSide(color: Colors.white)
+                        RatingBarIndicator(
+                          rating: 3.75,
+                          itemBuilder: (context, index) => Icon(
+                            Icons.star,
+                            color: product.color,
                           ),
-                          onPressed: () => {},
-                          //padding: EdgeInsets.all(40),
-                          color: product.color,
-                          child: Text(
-                            "BUY",
-                            style: mediumText,
-                          ),
+                          itemCount: 5,
+                          itemSize: 25.0,
+                          direction: Axis.horizontal,
                         ),
                       ],
                     ),
-
                     SizedBox(height: 20),
                     Text(product.title, style: largeText),
                     SizedBox(height: 20),
                     Text(product.description, style: smallText),
                     SizedBox(height: 20),
-
+                    Center(
+                      child: RaisedButton(
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(18.0),
+                        ),
+                        onPressed: () => {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => ProductCart(
+                                      productList: Res.fetchProducts()))),
+                        },
+                        color: product.color,
+                        child: Text(
+                          "ADD TO CART",
+                          style: mediumText,
+                        ),
+                      ),
+                    ),
                   ],
                 ),
               ),

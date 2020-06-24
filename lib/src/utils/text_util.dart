@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:jin_ecomm/src/model/Product.dart';
+import 'package:jin_ecomm/src/view/product_detail.dart';
 
 TextStyle smallText = GoogleFonts.comicNeue(
   fontSize: 12,
@@ -30,36 +31,45 @@ TextStyle xxLargeText = GoogleFonts.comicNeue(
 ListView getCardList(List<Product> products) {
   return ListView.builder(
       itemCount: products.length,
-      scrollDirection: Axis.vertical,
       itemBuilder: (BuildContext context, int index) {
-        return new Card(
-          elevation: 0.0,
-          margin: EdgeInsets.all(8),
-          child: Container(
-            width: 180,
-            child: Column(
-              children: [
-                Image.asset(
-                  products[index].image,
-                  height: 200,
-                  width: 250,
-                  fit: BoxFit.fill,
-                ),
-                SizedBox(height: 5),
-                Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 18, vertical: 10),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        Text(products[index].title, style: mediumText),
-                        CircleAvatar(
-                          backgroundColor: products[index].color,
-                          radius: 10,
-                        )
-                      ],
-                    ))
-              ],
+        return GestureDetector(
+          onTap: (){
+            Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => ProductDetail(
+                      product: products[index],
+                    )));
+          },
+          child: new Card(
+            elevation: 0.0,
+            margin: EdgeInsets.all(8),
+            child: Container(
+              width: 180,
+              child: Column(
+                children: [
+                  Image.asset(
+                    products[index].image,
+                    height: 200,
+                    width: 250,
+                    fit: BoxFit.fill,
+                  ),
+                  SizedBox(height: 5),
+                  Padding(
+                      padding: EdgeInsets.symmetric(horizontal: 18, vertical: 10),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Text(products[index].title, style: mediumText),
+                          CircleAvatar(
+                            backgroundColor: products[index].color,
+                            radius: 10,
+                          )
+                        ],
+                      ))
+                ],
+              ),
             ),
           ),
         );

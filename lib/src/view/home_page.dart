@@ -5,7 +5,9 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:jin_ecomm/src/model/Product.dart';
 import 'package:jin_ecomm/src/utils/resource.dart';
 import 'package:jin_ecomm/src/utils/text_util.dart';
+import 'package:jin_ecomm/src/view/login_screen.dart';
 import 'package:jin_ecomm/src/view/product_detail.dart';
+import 'package:jin_ecomm/src/view/product_list.dart';
 
 class HomePage extends StatefulWidget {
   HomePage({Key key, this.title}) : super(key: key);
@@ -23,65 +25,10 @@ class _HomePageState extends State<HomePage> {
   void initState() {
     super.initState();
     setState(() {
-      productList = _fetchProducts();
+      productList = Res.fetchProducts();
     });
   }
 
-  List<Product> _fetchProducts() {
-    String description =
-        "A product description is the marketing copy that explains what a product is and why it’s worth purchasing. The purpose of a product description is to supply customers with important information about the features and benefits of the product so they’re compelled to buy";
-    productList.add(new Product(
-        color: Colors.amber,
-        count: "3",
-        description: description,
-        image: Res.sofa,
-        info: "",
-        price: "5000",
-        size: "23/56",
-        tag: "",
-        title: "Sofa"));
-    productList.add(new Product(
-        color: Colors.lightBlue,
-        count: "1",
-        description: description,
-        image: Res.table,
-        info: "",
-        price: "4000",
-        size: "43/506",
-        tag: "",
-        title: "Table"));
-    productList.add(new Product(
-        color: Colors.amberAccent,
-        count: "30",
-        description: description,
-        image: Res.lamp,
-        info: "",
-        price: "500",
-        size: "23/56",
-        tag: "",
-        title: "Lamp"));
-    productList.add(new Product(
-        color: Colors.pink,
-        count: "5",
-        description: description,
-        image: Res.chair,
-        info: "",
-        price: "500",
-        size: "23/56",
-        tag: "",
-        title: "Chair"));
-    productList.add(new Product(
-        color: Colors.teal,
-        count: "5",
-        description: description,
-        image: Res.table1,
-        info: "",
-        price: "500",
-        size: "23/56",
-        tag: "",
-        title: "Table Of Thrown"));
-    return productList;
-  }
 
   ListView buildProductListView() {
     return ListView.builder(
@@ -140,13 +87,13 @@ class _HomePageState extends State<HomePage> {
         padding: EdgeInsets.all(10),
         child: Column(
           children: <Widget>[
-            SizedBox(height: 50),
+            SizedBox(height: 20),
             buildActionbar(),
             SizedBox(height: 20),
             buildSearchRow(),
             SizedBox(height: 30),
             buildCategoryRow("Categories"),
-            buildCategoryListview(),
+            buildCategoryListView(),
             buildCategoryRow("Other Products"),
             Expanded(
               child: getCardList(productList),
@@ -157,7 +104,7 @@ class _HomePageState extends State<HomePage> {
     );
   }
 
-  Container buildCategoryListview() {
+  Container buildCategoryListView() {
     return Container(
       height: 210,
       width: double.infinity,
@@ -176,7 +123,12 @@ class _HomePageState extends State<HomePage> {
         SizedBox(height: 10),
         IconButton(
           icon: Icon(Icons.arrow_forward),
-          onPressed: () => {},
+          onPressed: () => {
+            Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => ProductList())),
+          },
           tooltip: "Filter",
           visualDensity: VisualDensity.adaptivePlatformDensity,
           iconSize: 30,
@@ -211,7 +163,7 @@ class _HomePageState extends State<HomePage> {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Text(
-          'E-comm..',
+          'Interiors.',
           //londrinaShadow
           //pacifico
           style: GoogleFonts.pacifico(
@@ -220,9 +172,17 @@ class _HomePageState extends State<HomePage> {
             color: Colors.pink
           ),
         ),
-        CircleAvatar(
-          radius: 25,
-          backgroundColor: Colors.grey.shade400,
+        GestureDetector(
+          onTap: ()=>{
+            Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => LoginScreen())),
+          },
+          child: CircleAvatar(
+            radius: 25,
+            backgroundColor: Colors.grey.shade400,
+          ),
         )
       ],
     );
