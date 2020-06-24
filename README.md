@@ -1,6 +1,6 @@
-# Ecommerce Application
+# E-commerce Application
 
-A new ecommerce project.
+A new e-commerce project.
 
 DESCRIPTION
 Hey 👋
@@ -13,6 +13,10 @@ https://dribbble.com/desinnstudio
 🥇Follow me on Twitter:
 https://www.twitter.com/ishailesmishra
 
-Need some help? Drop a message to me
+### design inspiration:
 
-![alt text](http://url/to/img.png)
+![alt text](https://github.com/ishaileshmishra/jin_ecomm/blob/master/assets/srcn/design.png?raw=true)
+
+
+
+Need some help? Drop a message to me
