@@ -8,7 +8,7 @@ https://www.twitter.com/ishailesmishra
 
 ## ❤ ️Design Taken from:
 
-<img src="assets/srcn/design.png" width=230>
+<img src="assets/srcn/design.png" width=730>
 
 ## Screen Shots
 
