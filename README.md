@@ -3,19 +3,19 @@
 DESCRIPTION
 Hi 👋 I recently started with an E-commerce App and decided to share my exploration. I tried to make it sleek and according to latest design trends.
 
-❤ ️Design Taken from:
-https://dribbble.com/desinnstudio
-![alt text](https://github.com/ishaileshmishra/jin_ecomm/blob/master/assets/srcn/design.png?raw=true)
-
 🥇Follow me on Twitter:
 https://www.twitter.com/ishailesmishra
 
-### design:
+## ❤ ️Design Taken from:
 
-![alt text](https://github.com/ishaileshmishra/jin_ecomm/blob/master/assets/srcn/screen1.png?raw=true)
+<img src="assets/srcn/design.png" width=230>
 
+## Screen Shots
 
+<img src="assets/srcn/scrn0.png" width=230> <img src="assets/srcn/scrn1.png" width=230>
 
+<img src="assets/srcn/scrn2.png" width=230> <img src="assets/srcn3/scrn.png" width=230>
 
+## API Information (unde development)
 
 Need some help? Drop a message to me
