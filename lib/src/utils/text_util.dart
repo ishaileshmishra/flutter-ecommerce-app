@@ -1,77 +1,32 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:jin_ecomm/src/model/Product.dart';
-import 'package:jin_ecomm/src/view/product_detail.dart';
 
-TextStyle smallText = GoogleFonts.comicNeue(
+TextStyle smallText = GoogleFonts.ptSans(
   fontSize: 12,
   fontWeight: FontWeight.normal,
 );
 
-TextStyle mediumText = GoogleFonts.mandali(
+TextStyle normalText = GoogleFonts.ptSans(
+  fontSize: 14,
+  fontWeight: FontWeight.normal,
+);
+
+TextStyle mediumText = GoogleFonts.ptSans(
   fontSize: 18,
   fontWeight: FontWeight.bold,
 );
 
-TextStyle largeText = GoogleFonts.comicNeue(
+TextStyle largeText = GoogleFonts.ptSans(
   fontSize: 22,
   fontWeight: FontWeight.bold,
 );
 
-TextStyle extraLargeText = GoogleFonts.londrinaShadow(
+TextStyle extraLargeText = GoogleFonts.ptSans(
   fontSize: 35,
   fontWeight: FontWeight.bold,
 );
 
-TextStyle xxLargeText = GoogleFonts.comicNeue(
+TextStyle xxLargeText = GoogleFonts.ptSans(
   fontSize: 45,
 );
-
-ListView getCardList(List<Product> products) {
-  return ListView.builder(
-      itemCount: products.length,
-      itemBuilder: (BuildContext context, int index) {
-        return GestureDetector(
-          onTap: (){
-            Navigator.push(
-                context,
-                MaterialPageRoute(
-                    builder: (context) => ProductDetail(
-                      product: products[index],
-                    )));
-          },
-          child: new Card(
-            elevation: 0.0,
-            margin: EdgeInsets.all(8),
-            child: Container(
-              width: 180,
-              child: Column(
-                children: [
-                  Image.asset(
-                    products[index].image,
-                    height: 200,
-                    width: 250,
-                    fit: BoxFit.fill,
-                  ),
-                  SizedBox(height: 5),
-                  Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 18, vertical: 10),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          Text(products[index].title, style: mediumText),
-                          CircleAvatar(
-                            backgroundColor: products[index].color,
-                            radius: 10,
-                          )
-                        ],
-                      ))
-                ],
-              ),
-            ),
-          ),
-        );
-      });
-}

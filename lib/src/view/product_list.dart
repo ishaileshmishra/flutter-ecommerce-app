@@ -1,13 +1,62 @@
 import 'package:flutter/material.dart';
 import 'package:jin_ecomm/src/model/Product.dart';
 import 'package:jin_ecomm/src/utils/resource.dart';
-import 'package:jin_ecomm/src/utils/text_util.dart';
+import 'package:jin_ecomm/src/view/product_detail.dart';
 
 class ProductList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    List<Product> productList = Res.fetchProducts();
 
-    List<Product> products = Res.fetchProducts();
+    Card buildCardGrid(int index) {
+      return Card(
+        elevation: 0,
+        child: new GridTile(
+          footer: Padding(
+              padding: EdgeInsets.all(10),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(productList[index].title),
+                  CircleAvatar(
+                    backgroundColor: productList[index].color,
+                    radius: 10,
+                  )
+                ],
+              )),
+          child:  Padding(
+            padding: EdgeInsets.all(10),
+            child: Image.asset(productList[index]
+                .image),
+          ), //just for testing, will fill with image later
+        ),
+      );
+    }
+
+    GridView buildProductGridView(BuildContext context) {
+      var orientation = MediaQuery.of(context).orientation;
+      return GridView.builder(
+        itemCount: productList.length,
+        padding: EdgeInsets.only(top: 0),
+        reverse: false,
+        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+            crossAxisCount: (orientation == Orientation.portrait) ? 2 : 3),
+        itemBuilder: (BuildContext context, int index) {
+          return GestureDetector(
+            onTap: () => {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => ProductDetail(
+                        product: productList[index],
+                      ))),
+            },
+            child:  buildCardGrid(index),
+          );
+        },
+      );
+    }
+
 
     return Scaffold(
       backgroundColor: Colors.grey.shade300,
@@ -17,7 +66,7 @@ class ProductList extends StatelessWidget {
         backgroundColor: Colors.grey.shade300,
       ),
       body: Container(
-        child: getCardList(products)
+        child: buildProductGridView(context)
       ),
     );
   }

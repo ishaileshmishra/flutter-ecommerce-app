@@ -38,28 +38,33 @@ class _HomePageState extends State<HomePage> {
     );
   }
 
-  Row buildCategoryRow(String section) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: [
-        Text(
-          section,
-          style: mediumText,
-        ),
-        SizedBox(height: 10),
-        IconButton(
-          icon: Icon(Icons.arrow_forward),
-          onPressed: () => {
-            Navigator.push(context,
-                MaterialPageRoute(builder: (context) => ProductList())),
-          },
-          tooltip: "Filter",
-          visualDensity: VisualDensity.adaptivePlatformDensity,
-          iconSize: 30,
-          padding: EdgeInsets.all(8),
-          color: Colors.black,
-        ),
-      ],
+  Widget buildCategoryRow(String section) {
+    return Padding(
+      padding: EdgeInsets.symmetric(vertical: 10),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Text(
+            section,
+            style: mediumText,
+          ),
+          SizedBox(height: 10),
+          CircleAvatar(
+            backgroundColor: Colors.grey.shade200,
+            child: IconButton(
+              icon: Icon(Icons.arrow_forward_ios, size: 20,),
+              onPressed: () => {
+                Navigator.push(context, MaterialPageRoute(builder: (context) => ProductList())),
+              },
+              tooltip: "Filter",
+              visualDensity: VisualDensity.adaptivePlatformDensity,
+              iconSize: 30,
+              padding: EdgeInsets.all(8),
+              color: Colors.black,
+            ),
+          ),
+        ],
+      ),
     );
   }
 
@@ -68,10 +73,10 @@ class _HomePageState extends State<HomePage> {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Text(
-          'Interiors.',
+          'Interiors',
           //londrinaShadow
           //pacifico
-          style: GoogleFonts.pacifico(
+          style: GoogleFonts.yatraOne(
               fontSize: 35, fontWeight: FontWeight.bold, color: Colors.pink),
         ),
         GestureDetector(
@@ -93,15 +98,21 @@ class _HomePageState extends State<HomePage> {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         SearchProductWidget(),
-        SizedBox(height: 10),
-        IconButton(
-          icon: Icon(Icons.filter_list),
-          onPressed: () => {},
-          tooltip: "Filter",
-          visualDensity: VisualDensity.adaptivePlatformDensity,
-          iconSize: 30,
-          padding: EdgeInsets.all(8),
-          color: Colors.black,
+        SizedBox(width: 10),
+        CircleAvatar(
+          backgroundColor: Colors.grey.shade200,
+          child: IconButton(
+            alignment: Alignment.center,
+            icon: Icon(Icons.filter_list, size: 20,),
+            onPressed: () => {
+             print("Filter clicked")
+            },
+            tooltip: "Filter",
+            visualDensity: VisualDensity.adaptivePlatformDensity,
+            iconSize: 30,
+            padding: EdgeInsets.all(8),
+            color: Colors.black,
+          ),
         ),
       ],
     );
@@ -122,45 +133,16 @@ class _HomePageState extends State<HomePage> {
                             product: productList[index],
                           ))),
             },
-            child: new Card(
-              elevation: 0,
-              margin: EdgeInsets.all(8),
-              child: Container(
-                width: 180,
-                child: Column(
-                  children: [
-                    Image.asset(
-                      productList[index].image,
-                      height: 160,
-                      width: 250,
-                      fit: BoxFit.fill,
-                    ),
-                    SizedBox(height: 5),
-                    Padding(
-                        padding: EdgeInsets.symmetric(horizontal: 8),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: [
-                            Text(productList[index].title, style: smallText),
-                            CircleAvatar(
-                              backgroundColor: productList[index].color,
-                              radius: 10,
-                            )
-                          ],
-                        ))
-                  ],
-                ),
+            child: Container(
+                width: 300,
+                child: buildCardGrid(index)
               ),
-            ),
           );
         });
   }
 
   GridView buildProductGridView(BuildContext context) {
     var orientation = MediaQuery.of(context).orientation;
-    var padding = MediaQuery.of(context).removePadding(removeTop: true);
-    //productList
     return GridView.builder(
       itemCount: productList.length,
       padding: EdgeInsets.only(top: 0),
@@ -177,28 +159,35 @@ class _HomePageState extends State<HomePage> {
                           product: productList[index],
                         ))),
           },
-          child: new Card(
-            elevation: 0,
-            child: new GridTile(
-              footer: Padding(
-                  padding: EdgeInsets.all(10),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Text(productList[index].title),
-                      CircleAvatar(
-                        backgroundColor: productList[index].color,
-                        radius: 10,
-                      )
-                    ],
-                  )),
-              child: new Image.asset(productList[index]
-                  .image), //just for testing, will fill with image later
-            ),
-          ),
+          child:  buildCardGrid(index),
         );
       },
     );
+  }
+
+  Card buildCardGrid(int index) {
+    return Card(
+          elevation: 0,
+          child: new GridTile(
+            footer: Padding(
+                padding: EdgeInsets.all(10),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(productList[index].title),
+                    CircleAvatar(
+                      backgroundColor: productList[index].color,
+                      radius: 10,
+                    )
+                  ],
+                )),
+            child:  Padding(
+              padding: EdgeInsets.all(10),
+              child: Image.asset(productList[index]
+                  .image),
+            ), //just for testing, will fill with image later
+          ),
+        );
   }
 
   @override
@@ -206,20 +195,20 @@ class _HomePageState extends State<HomePage> {
     var screenSize = MediaQuery.of(context).size;
 
     return Scaffold(
-      backgroundColor: Colors.grey.shade300,
+      backgroundColor: Colors.grey.shade100,
       body: Padding(
         padding: EdgeInsets.all(10),
         child: Column(
           children: <Widget>[
-            SizedBox(height: 20),
+            SizedBox(height: 30),
             buildActionbar(),
             SizedBox(height: 20),
             buildSearchRow(),
-            SizedBox(height: 30),
+            //SizedBox(height: 30),
             buildCategoryRow("Categories"),
             buildCategoryListView(),
             buildCategoryRow("Other Products"),
-            Expanded(
+            Flexible(
               child: buildProductGridView(context), //getCardList(productList),
             ),
           ],

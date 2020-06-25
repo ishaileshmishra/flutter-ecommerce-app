@@ -12,6 +12,7 @@ class ProductCart extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.grey.shade200,
       appBar: AppBar(
         elevation: 0,
         leading: GestureDetector(
@@ -68,6 +69,8 @@ class ProductCart extends StatelessWidget {
                     itemCount: productList.length,
                     itemBuilder: (BuildContext context, int index) {
                       return Card(
+                        borderOnForeground: true,
+                        shadowColor: Colors.black87,
                         color: Colors.grey.shade100,
                         child: Column(
                           children: [
