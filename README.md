@@ -12,9 +12,9 @@ https://www.twitter.com/ishailesmishra
 
 ## Screen Shots
 
-<img src="assets/srcn/scrn0.png" width=230> <img src="assets/srcn/scrn1.png" width=230>
+<img src="assets/srcn/one.png" width=230> <img src="assets/srcn/two.png" width=230> <img src="assets/srcn/three.png" width=230>  <img src="assets/srcn/four.png" width=230>
 
-<img src="assets/srcn/scrn2.png" width=230> <img src="assets/srcn3/scrn.png" width=230>
+<img src="assets/srcn/five.png" width=230> <img src="assets/srcn/six.png" width=230>
 
 ## API Information (unde development)
 
