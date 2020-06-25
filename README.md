@@ -19,6 +19,16 @@ https://www.twitter.com/ishailesmishra
 ## API Information (under development)
 
 Need some help? Drop a message to me
+<table>
+    <tr>
+        <td>mshaileshr@gmail.com</td>
+    </tr>
+</table>
 
+<table>
+    <tr>
+        <td>Download APK</td>
+    </tr>
+</table>
 
-[Download APK](https://github.com/ishaileshmishra/jin_ecomm/blob/master/assets/apk/app-release.apk?raw=true)
+[Click To Download](https://github.com/ishaileshmishra/jin_ecomm/blob/master/assets/apk/app-release.apk?raw=true)
