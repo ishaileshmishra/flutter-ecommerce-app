@@ -16,7 +16,7 @@ class ProductCart extends StatelessWidget {
       appBar: AppBar(
         elevation: 0,
         leading: GestureDetector(
-          onTap: ()=> Navigator.pop(context),
+          onTap: () => Navigator.pop(context),
           child: Icon(
             Icons.arrow_back_ios,
             color: Colors.black54,
