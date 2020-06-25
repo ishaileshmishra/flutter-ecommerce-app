@@ -16,6 +16,6 @@ https://www.twitter.com/ishailesmishra
 
 <img src="assets/srcn/four.png" width=230> <img src="assets/srcn/five.png" width=230> <img src="assets/srcn/six.png" width=230>
 
-## API Information (unde development)
+## API Information (under development)
 
 Need some help? Drop a message to me
