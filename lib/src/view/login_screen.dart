@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:jin_ecomm/src/utils/text_util.dart';
+import 'package:jin_ecomm/src/utils/custom_input_field.dart';
 
 class LoginScreen extends StatefulWidget {
   @override
@@ -11,140 +11,100 @@ class LoginScreen extends StatefulWidget {
 class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
+    final deviceHeight = MediaQuery.of(context).size.height;
+    final deviceWidth = MediaQuery.of(context).size.width;
+
     return Scaffold(
-      /*appBar: AppBar(
-        title: Text("Login", style: mediumText,),
+      appBar: AppBar(
         backgroundColor: Colors.transparent,
-        elevation: 0.0,
-        centerTitle: true,
-        leading: Padding(
-          padding: EdgeInsets.only(left: 10),
-          child: CircleAvatar(
-            backgroundColor: Colors.teal,
-            child: Icon(
-                Icons.arrow_back_ios
+        actions: [
+          Padding(
+            padding: EdgeInsets.all(10),
+            child: CircleAvatar(
+              child: Icon(Icons.close),
             ),
-          ),
-        ),
-      ),*/
+          )
+        ],
+      ),
       body: Container(
-          child: Container(
-        alignment: Alignment.center,
-        padding: EdgeInsets.all(12),
+        height: deviceHeight,
+        width: deviceWidth,
         decoration: BoxDecoration(
           image: DecorationImage(
             image: AssetImage("assets/images/wall.jpg"),
             fit: BoxFit.cover,
           ),
         ),
-        //child: buildCloseContainer(context),
-
-        child: Column(
-          //mainAxisAlignment: MainAxisAlignment.spaceAround,
-          children: [
-            buildCloseContainer(context),
-            SizedBox(
-              height: 120,
-            ),
-            TextFormField(
-              keyboardType: TextInputType.text,
-              autofocus: false,
-              style: new TextStyle(
-                  fontWeight: FontWeight.normal, color: Colors.white),
-              decoration: new InputDecoration(
-                  contentPadding:
-                      new EdgeInsets.symmetric(vertical: 5.0, horizontal: 8.0),
-                  labelText: "E-mail",
-                  fillColor: Colors.grey.shade200,
-                  prefixIcon: Container(
-                      color: Colors.teal,
-                      child: Icon(
-                        Icons.email,
-                        color: Colors.white,
-                      )),
-                  border: new OutlineInputBorder(
-                      borderRadius: new BorderRadius.circular(8.0),
-                      gapPadding: 12),
-                  enabledBorder: InputBorder.none,
-                  filled: true),
-              validator: (val) {
-                if (val.length == 0) {
-                  return "E-mail field cannot be empty";
-                } else {
-                  return null;
-                }
-              },
-            ),
-            SizedBox(
-              height: 10,
-            ),
-            TextFormField(
-              keyboardType: TextInputType.text,
-              autofocus: false,
-              style: new TextStyle(
-                  fontWeight: FontWeight.normal, color: Colors.white),
-              decoration: new InputDecoration(
-                  contentPadding:
-                      new EdgeInsets.symmetric(vertical: 5.0, horizontal: 8.0),
-                  labelText: "Password",
-                  fillColor: Colors.grey.shade200,
-                  prefixIcon: Container(
-                      color: Colors.teal,
-                      child: Icon(
-                        Icons.lock_outline,
-                        color: Colors.white,
-                      )),
-                  border: new OutlineInputBorder(
-                      borderRadius: new BorderRadius.circular(8.0),
-                      gapPadding: 12),
-                  enabledBorder: InputBorder.none,
-                  filled: true),
-              validator: (val) {
-                if (val.length == 0) {
-                  return "Password field cannot be empty";
-                } else {
-                  return null;
-                }
-              },
-            ),
-
-            SizedBox(
-              height: 20,
-            ),
-            RaisedButton(
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(18.0),
+        child: Stack(
+          children: <Widget>[
+            Align(
+              alignment: Alignment.bottomRight,
+              widthFactor: 0.6,
+              heightFactor: 0.6,
+              child: Material(
+                borderRadius: BorderRadius.all(Radius.circular(200)),
+                color: Color.fromRGBO(255, 255, 255, 0.4),
+                child: Container(
+                  width: 400,
+                  height: 400,
+                ),
               ),
-              onPressed: () => {
-              },
-              color: Colors.white,
-              child: Text(
-                "Sign In",
-                style: mediumText,
+            ),
+            Center(
+              child: Container(
+                width: 500,
+                height: 400,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: <Widget>[
+                    Material(
+                        elevation: 10.0,
+                        borderRadius: BorderRadius.all(Radius.circular(50.0)),
+                        child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Image.asset(
+                            'assets/images/sofa.png',
+                            width: 80,
+                            height: 80,
+                          ),
+                        )),
+                    CustomInputField(
+                      Icon(
+                        Icons.person,
+                        color: Colors.redAccent,
+                        size: 30,
+                      ),
+                      'Username',
+                    ),
+                    CustomInputField(
+                        Icon(Icons.lock, color: Colors.redAccent, size: 30),
+                        'Password'),
+                    Container(
+                      width: 150,
+                      child: RaisedButton(
+                        onPressed: () {
+                          print('Tapped');
+                        },
+                        elevation: 5,
+                        padding: EdgeInsets.all(10),
+                        color: Colors.pink,
+                        textColor: Colors.white,
+                        shape: RoundedRectangleBorder(
+                            borderRadius:
+                                BorderRadius.all(Radius.circular(10.0))),
+                        child: Text(
+                          'Login',
+                          style: TextStyle(fontSize: 20.0),
+                        ),
+                      ),
+                    )
+                  ],
+                ),
               ),
             ),
           ],
-        ),
-      )),
-    );
-  }
-
-  Container buildCloseContainer(BuildContext context) {
-    return Container(
-      margin: EdgeInsets.only(top: 40),
-      alignment: Alignment.topRight,
-      child: CircleAvatar(
-        backgroundColor: Colors.grey.shade300,
-        child: GestureDetector(
-          onTap: () => {Navigator.pop(context)},
-          child: Icon(
-            Icons.close,
-            color: Colors.red,
-          ),
         ),
       ),
     );
   }
 }
-
-class EmailWidget {}
