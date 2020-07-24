@@ -7,7 +7,7 @@ TextStyle smallText = GoogleFonts.ptSans(
   fontWeight: FontWeight.normal,
 );
 
-TextStyle normalText = GoogleFonts.ptSans(
+TextStyle normalText = GoogleFonts.ptSansCaption(
   fontSize: 14,
   fontWeight: FontWeight.normal,
 );
@@ -22,7 +22,7 @@ TextStyle largeText = GoogleFonts.ptSans(
   fontWeight: FontWeight.bold,
 );
 
-TextStyle extraLargeText = GoogleFonts.ptSans(
+TextStyle extraLargeText = GoogleFonts.ptSansCaption(
   fontSize: 35,
   fontWeight: FontWeight.bold,
 );

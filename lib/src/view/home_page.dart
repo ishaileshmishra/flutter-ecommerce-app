@@ -52,9 +52,13 @@ class _HomePageState extends State<HomePage> {
           CircleAvatar(
             backgroundColor: Colors.grey.shade200,
             child: IconButton(
-              icon: Icon(Icons.arrow_forward_ios, size: 20,),
+              icon: Icon(
+                Icons.arrow_forward_ios,
+                size: 20,
+              ),
               onPressed: () => {
-                Navigator.push(context, MaterialPageRoute(builder: (context) => ProductList())),
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => ProductList())),
               },
               tooltip: "Filter",
               visualDensity: VisualDensity.adaptivePlatformDensity,
@@ -74,9 +78,7 @@ class _HomePageState extends State<HomePage> {
       children: [
         Text(
           'Interiors',
-          //londrinaShadow
-          //pacifico
-          style: GoogleFonts.yatraOne(
+          style: GoogleFonts.abrilFatface(
               fontSize: 35, fontWeight: FontWeight.bold, color: Colors.pink),
         ),
         GestureDetector(
@@ -103,10 +105,11 @@ class _HomePageState extends State<HomePage> {
           backgroundColor: Colors.grey.shade200,
           child: IconButton(
             alignment: Alignment.center,
-            icon: Icon(Icons.filter_list, size: 20,),
-            onPressed: () => {
-             print("Filter clicked")
-            },
+            icon: Icon(
+              Icons.filter_list,
+              size: 20,
+            ),
+            onPressed: () => {print("Filter clicked")},
             tooltip: "Filter",
             visualDensity: VisualDensity.adaptivePlatformDensity,
             iconSize: 30,
@@ -133,10 +136,7 @@ class _HomePageState extends State<HomePage> {
                             product: productList[index],
                           ))),
             },
-            child: Container(
-                width: 300,
-                child: buildCardGrid(index)
-              ),
+            child: Container(width: 300, child: buildCardGrid(index)),
           );
         });
   }
@@ -159,7 +159,7 @@ class _HomePageState extends State<HomePage> {
                           product: productList[index],
                         ))),
           },
-          child:  buildCardGrid(index),
+          child: buildCardGrid(index),
         );
       },
     );
@@ -167,27 +167,26 @@ class _HomePageState extends State<HomePage> {
 
   Card buildCardGrid(int index) {
     return Card(
-          elevation: 0,
-          child: new GridTile(
-            footer: Padding(
-                padding: EdgeInsets.all(10),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text(productList[index].title),
-                    CircleAvatar(
-                      backgroundColor: productList[index].color,
-                      radius: 10,
-                    )
-                  ],
-                )),
-            child:  Padding(
-              padding: EdgeInsets.all(10),
-              child: Image.asset(productList[index]
-                  .image),
-            ), //just for testing, will fill with image later
-          ),
-        );
+      elevation: 0,
+      child: new GridTile(
+        footer: Padding(
+            padding: EdgeInsets.all(10),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(productList[index].title),
+                CircleAvatar(
+                  backgroundColor: productList[index].color,
+                  radius: 10,
+                )
+              ],
+            )),
+        child: Padding(
+          padding: EdgeInsets.all(10),
+          child: Image.asset(productList[index].image),
+        ), //just for testing, will fill with image later
+      ),
+    );
   }
 
   @override

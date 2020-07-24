@@ -23,7 +23,7 @@ class ProductDetail extends StatelessWidget {
         backgroundColor: product.color,
         title: Text(
           product.title,
-          style: GoogleFonts.yatraOne(fontSize: 18),
+          style: GoogleFonts.aBeeZee(fontSize: 18),
         ),
         centerTitle: true,
         actions: [
