@@ -32,9 +32,9 @@ class _HomePageState extends State<HomePage> {
 
   Container buildCategoryListView() {
     return Container(
-      height: 210,
+      height: 150,
       width: double.infinity,
-      child: buildProductListView(),
+      child: renderProductCategories(),
     );
   }
 
@@ -121,7 +121,7 @@ class _HomePageState extends State<HomePage> {
     );
   }
 
-  ListView buildProductListView() {
+  ListView renderProductCategories() {
     return ListView.builder(
         padding: EdgeInsets.only(left: 0),
         itemCount: productList.length,
@@ -136,7 +136,7 @@ class _HomePageState extends State<HomePage> {
                             product: productList[index],
                           ))),
             },
-            child: Container(width: 300, child: buildCardGrid(index)),
+            child: Container(width: 100, child: buildCardGrid(index)),
           );
         });
   }
@@ -168,22 +168,29 @@ class _HomePageState extends State<HomePage> {
   Card buildCardGrid(int index) {
     return Card(
       elevation: 0,
+      color: productList[index].color,
       child: new GridTile(
         footer: Padding(
-            padding: EdgeInsets.all(10),
+            padding: EdgeInsets.all(6),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text(productList[index].title),
+                Text(
+                  productList[index].title,
+                  style: TextStyle(fontSize: 10),
+                ),
                 CircleAvatar(
                   backgroundColor: productList[index].color,
-                  radius: 10,
+                  radius: 8,
                 )
               ],
             )),
         child: Padding(
           padding: EdgeInsets.all(10),
-          child: Image.asset(productList[index].image),
+          child: Image.asset(
+            productList[index].image,
+            fit: BoxFit.contain,
+          ),
         ), //just for testing, will fill with image later
       ),
     );

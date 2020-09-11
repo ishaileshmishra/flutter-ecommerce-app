@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:jin_ecomm/src/utils/text_util.dart';
@@ -27,69 +28,73 @@ class PaymentGateway extends StatelessWidget {
     }
 
     return Scaffold(
-      appBar: AppBar(
-        elevation: 0,
-        backgroundColor: Colors.grey.shade300,
-        title: Text("Payment gateway", style: GoogleFonts.alatsi(
-          fontSize: 20,
-          color: Colors.black87,
-          fontWeight: FontWeight.bold,
-        ),),
-        centerTitle: true,
-        leading: GestureDetector(
-          onTap: ()=>{
-            Navigator.pop(context)
-          },
-            child: Icon(Icons.arrow_back_ios)),
-      ),
+      appBar: buildAppBar(context),
       body: Container(
-        padding: EdgeInsets.all(12),
+        padding: EdgeInsets.only(top: 0, left: 10, right: 10),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            SizedBox(
-              height: 20,
-            ),
             Expanded(
                 child: ListView.builder(
                     itemCount: _getPaymentCards().length,
                     itemBuilder: (BuildContext context, int index) {
                       return Card(
-                        color: Colors.grey.shade200,
+                        color: Colors.grey.shade400,
                         child: Padding(
-                          padding: EdgeInsets.all(10),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-
-                              Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Text(
-                                    _getPaymentCards()[index].title,
-                                    style: largeText,
-                                  ),
-                                  Text(
-                                    "Pay bill using ${_getPaymentCards()[index].title}",
-                                    style: smallText,
-                                  ),
-                                ],
-                              ),
-
-                              CircleAvatar(
-                                radius: 60,
-                                backgroundColor: Colors.pink,
-                                child: Image.asset(_getPaymentCards()[index].image),
-                              )
-
-                            ],
-                          )
-                        ),
+                            padding: EdgeInsets.all(8),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      _getPaymentCards()[index].title,
+                                      style: TextStyle(
+                                          fontSize: 14,
+                                          fontWeight: FontWeight.bold),
+                                    ),
+                                    Text(
+                                      "Pay bill using ${_getPaymentCards()[index].title}",
+                                      style: smallText,
+                                    ),
+                                  ],
+                                ),
+                                CircleAvatar(
+                                  radius: 20,
+                                  backgroundColor: Colors.pink,
+                                  child: Image.asset(
+                                      _getPaymentCards()[index].image),
+                                )
+                              ],
+                            )),
                       );
                     }))
           ],
         ),
       ),
+    );
+  }
+
+  AppBar buildAppBar(BuildContext context) {
+    return AppBar(
+      elevation: 0,
+      backgroundColor: Colors.grey.shade200,
+      title: Text(
+        "PAYMENT",
+        style: GoogleFonts.lato(
+          fontSize: 20,
+          color: Colors.black87,
+          fontWeight: FontWeight.bold,
+        ),
+      ),
+      centerTitle: true,
+      leading: GestureDetector(
+          onTap: () => {Navigator.pop(context)},
+          child: Icon(
+            CupertinoIcons.back,
+            color: Colors.black38,
+          )),
     );
   }
 }
