@@ -13,15 +13,15 @@ class SearchProductWidget extends StatelessWidget {
         keyboardType: TextInputType.text,
         autofocus: false,
         style:
-        new TextStyle(fontWeight: FontWeight.normal, color: Colors.white),
+            new TextStyle(fontWeight: FontWeight.normal, color: Colors.black),
         decoration: new InputDecoration(
             contentPadding:
-            new EdgeInsets.symmetric(vertical: 5.0, horizontal: 8.0),
-            labelText: "Search products",
+                new EdgeInsets.symmetric(vertical: 5.0, horizontal: 8.0),
+            labelText: "Find furnitures",
             fillColor: Colors.grey.shade200,
             suffixIcon: Icon(Icons.search),
             border: new OutlineInputBorder(
-                borderRadius: new BorderRadius.circular(8.0), gapPadding: 12),
+                borderRadius: new BorderRadius.circular(4.0), gapPadding: 12),
             enabledBorder: InputBorder.none,
             filled: true),
         validator: (val) {

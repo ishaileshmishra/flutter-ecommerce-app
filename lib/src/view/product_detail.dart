@@ -14,46 +14,33 @@ class ProductDetail extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var screenSize = MediaQuery.of(context).size;
+    var screenHeight = (MediaQuery.of(context).size.height) / 2;
+    var screenWidth = (MediaQuery.of(context).size.width) / 2;
+
     print("screenSize: $screenSize");
     print("screenHeight: ${screenSize.height}");
     print("screenWidth: ${screenSize.width}");
     return Scaffold(
-      appBar: AppBar(
-        elevation: 0,
-        backgroundColor: product.color,
-        title: Text(
-          product.title,
-          style: GoogleFonts.aBeeZee(fontSize: 18),
-        ),
-        centerTitle: true,
-        actions: [
-          Padding(
-            padding: EdgeInsets.only(right: 10),
-            child: Icon(
-              Icons.add_shopping_cart,
-              size: 30,
-            ),
-          )
-        ],
-      ),
+      appBar: buildAppBar(),
       body: Container(
         color: product.color,
-        height: double.infinity,
+        //height: double.infinity,
         child: Column(
           children: [
-            Padding(
-                padding: EdgeInsets.symmetric(horizontal: 20),
-                child: Image.asset(
-                  product.image,
-                  alignment: Alignment.centerRight,
-                  height: (screenSize.height / 2),
-                )),
+            Container(
+              padding: EdgeInsets.symmetric(horizontal: 20),
+              child: Image.asset(
+                product.image,
+                alignment: Alignment.centerRight,
+                height: screenHeight,
+              ),
+            ),
             SizedBox(height: 20),
             Flexible(
               child: SingleChildScrollView(
                 child: Container(
                   height: (screenSize.height / 2),
-                  padding: EdgeInsets.symmetric(horizontal: 20),
+                  padding: EdgeInsets.symmetric(horizontal: 10),
                   decoration: BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.only(
@@ -86,16 +73,11 @@ class ProductDetail extends StatelessWidget {
                             padding: EdgeInsets.all(10),
                             child: Text(
                               "ADD TO CART",
-                              style: GoogleFonts.ubuntu(
-                                fontSize: 18
-                              ),
+                              style: GoogleFonts.lato(fontSize: 18),
                             ),
                           ),
                         ),
                       ),
-
-
-
                     ],
                   ),
                 ),
@@ -104,6 +86,27 @@ class ProductDetail extends StatelessWidget {
           ],
         ),
       ),
+    );
+  }
+
+  AppBar buildAppBar() {
+    return AppBar(
+      elevation: 0,
+      backgroundColor: product.color,
+      title: Text(
+        product.title,
+        style: GoogleFonts.lato(fontSize: 22),
+      ),
+      centerTitle: true,
+      actions: [
+        Padding(
+          padding: EdgeInsets.only(right: 10),
+          child: Icon(
+            Icons.add_shopping_cart,
+            size: 30,
+          ),
+        )
+      ],
     );
   }
 

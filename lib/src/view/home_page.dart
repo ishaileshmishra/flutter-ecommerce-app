@@ -77,8 +77,8 @@ class _HomePageState extends State<HomePage> {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Text(
-          'Interiors',
-          style: GoogleFonts.abrilFatface(
+          'Furnitures',
+          style: GoogleFonts.lato(
               fontSize: 35, fontWeight: FontWeight.bold, color: Colors.pink),
         ),
         GestureDetector(
