@@ -14,76 +14,69 @@ class ProductDetail extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var screenSize = MediaQuery.of(context).size;
-    var screenHeight = (MediaQuery.of(context).size.height) / 2;
-    var screenWidth = (MediaQuery.of(context).size.width) / 2;
+    var screenHeight = (screenSize.height) / 2;
+    var screenWidth = (screenSize.width) / 2;
 
-    print("screenSize: $screenSize");
-    print("screenHeight: ${screenSize.height}");
-    print("screenWidth: ${screenSize.width}");
     return Scaffold(
       appBar: buildAppBar(),
-      body: Container(
-        color: product.color,
-        //height: double.infinity,
-        child: Column(
-          children: [
-            Container(
-              padding: EdgeInsets.symmetric(horizontal: 20),
-              child: Image.asset(
-                product.image,
-                alignment: Alignment.centerRight,
-                height: screenHeight,
-              ),
+      body: ListView(
+        children: [
+          // container for the image of the product
+          Container(
+            padding: EdgeInsets.symmetric(horizontal: 20),
+            color: product.color,
+            child: Image.asset(
+              product.image,
+              alignment: Alignment.centerRight,
+              height: screenHeight - 100,
             ),
-            SizedBox(height: 20),
-            Flexible(
-              child: SingleChildScrollView(
-                child: Container(
-                  height: (screenSize.height / 2),
-                  padding: EdgeInsets.symmetric(horizontal: 10),
-                  decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.only(
-                          topLeft: Radius.circular(40),
-                          topRight: Radius.circular(40))),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      SizedBox(height: 20),
-                      buildRowPriceRating(),
-                      SizedBox(height: 10),
-                      Text(product.title, style: largeText),
-                      SizedBox(height: 10),
-                      Text(product.description, style: normalText),
-                      SizedBox(height: 20),
-                      Center(
-                        child: RaisedButton(
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(8.0),
-                          ),
-                          onPressed: () => {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => ProductCart(
-                                        productList: Res.fetchProducts()))),
-                          },
-                          color: product.color,
-                          child: Padding(
-                            padding: EdgeInsets.all(10),
-                            child: Text(
-                              "ADD TO CART",
-                              style: GoogleFonts.lato(fontSize: 18),
-                            ),
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
+          ),
+
+          // provides vertical space of 10 pxl
+          SizedBox(height: 10),
+
+          // container for the price & detail contents of the product
+          Container(
+            padding: EdgeInsets.symmetric(horizontal: 12),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                SizedBox(height: 10),
+                buildRowPriceRating(),
+                SizedBox(height: 10),
+                Text(product.title, style: largeText),
+                SizedBox(height: 10),
+                Text(product.description, style: normalText),
+                SizedBox(height: 20),
+                Center(
+                  child: buildAddToCartButton(context),
                 ),
-              ),
-            )
-          ],
+              ],
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  RaisedButton buildAddToCartButton(BuildContext context) {
+    return RaisedButton(
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(4.0),
+      ),
+      onPressed: () => {
+        Navigator.push(
+            context,
+            MaterialPageRoute(
+                builder: (context) =>
+                    ProductCart(productList: Res.fetchProducts()))),
+      },
+      color: product.color,
+      child: Padding(
+        padding: EdgeInsets.all(10),
+        child: Text(
+          "ADD TO CART",
+          style: GoogleFonts.lato(fontSize: 15),
         ),
       ),
     );
