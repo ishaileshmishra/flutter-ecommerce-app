@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:jin_ecomm/src/model/Product.dart';
-import 'package:jin_ecomm/src/utils/resource.dart';
-import 'package:jin_ecomm/src/utils/text_util.dart';
+import 'package:jin_ecomm/src/view/products/models/Product.dart';
+import 'package:jin_ecomm/src/utils/StaticRes.dart';
+import 'package:jin_ecomm/src/utils/TextUtility.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
-import 'package:jin_ecomm/src/view/product_cart.dart';
+import 'package:jin_ecomm/src/view/cart/ProductCart.dart';
 
 class ProductDetail extends StatelessWidget {
   ProductDetail({Key key, this.product}) : super(key: key);
@@ -15,7 +15,7 @@ class ProductDetail extends StatelessWidget {
   Widget build(BuildContext context) {
     var screenSize = MediaQuery.of(context).size;
     var screenHeight = (screenSize.height) / 2;
-    var screenWidth = (screenSize.width) / 2;
+    //var screenWidth = (screenSize.width) / 2;
 
     return Scaffold(
       appBar: buildAppBar(),

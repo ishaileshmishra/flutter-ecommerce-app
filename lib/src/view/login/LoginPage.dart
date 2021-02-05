@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:jin_ecomm/src/utils/custom_input_field.dart';
+import 'package:jin_ecomm/src/utils/CustomInputField.dart';
 
 class LoginScreen extends StatefulWidget {
   @override

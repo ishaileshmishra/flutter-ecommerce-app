@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:jin_ecomm/src/utils/text_util.dart';
+import 'package:jin_ecomm/src/utils/TextUtility.dart';
 
 class PaymentGateway extends StatelessWidget {
   @override
