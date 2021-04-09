@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:jin_ecomm/src/view/products/models/Product.dart';
-import 'package:jin_ecomm/src/utils/StaticRes.dart';
-import 'package:jin_ecomm/src/utils/TextUtility.dart';
+import 'package:flutter_ecommerce_app/src/view/products/models/Product.dart';
+import 'package:flutter_ecommerce_app/src/utils/StaticRes.dart';
+import 'package:flutter_ecommerce_app/src/utils/TextUtility.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
-import 'package:jin_ecomm/src/view/cart/ProductCart.dart';
+import 'package:flutter_ecommerce_app/src/view/cart/ProductCart.dart';
 
 class ProductDetail extends StatelessWidget {
   ProductDetail({Key key, this.product}) : super(key: key);

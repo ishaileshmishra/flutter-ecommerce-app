@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:jin_ecomm/src/view/products/models/Product.dart';
+import 'package:flutter_ecommerce_app/src/view/products/models/Product.dart';
 
 class Res{
 

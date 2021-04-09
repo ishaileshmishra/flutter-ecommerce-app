@@ -2,13 +2,13 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:jin_ecomm/src/view/products/models/Product.dart';
-import 'package:jin_ecomm/src/utils/TextWidgetSearch.dart';
-import 'package:jin_ecomm/src/utils/StaticRes.dart';
-import 'package:jin_ecomm/src/utils/TextUtility.dart';
-import 'package:jin_ecomm/src/view/login/LoginPage.dart';
-import 'package:jin_ecomm/src/view/details/ProductDetail.dart';
-import 'package:jin_ecomm/src/view/products/ProductList.dart';
+import 'package:flutter_ecommerce_app/src/view/products/models/Product.dart';
+import 'package:flutter_ecommerce_app/src/utils/TextWidgetSearch.dart';
+import 'package:flutter_ecommerce_app/src/utils/StaticRes.dart';
+import 'package:flutter_ecommerce_app/src/utils/TextUtility.dart';
+import 'package:flutter_ecommerce_app/src/view/login/LoginPage.dart';
+import 'package:flutter_ecommerce_app/src/view/details/ProductDetail.dart';
+import 'package:flutter_ecommerce_app/src/view/products/ProductList.dart';
 
 class HomePage extends StatefulWidget {
   HomePage({Key key, this.title}) : super(key: key);
