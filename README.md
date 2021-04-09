@@ -4,7 +4,7 @@ DESCRIPTION
 Hi 👋 I recently started with an E-commerce App and decided to share my exploration. I tried to make it sleek and according to latest design trends.
 
 🥇Follow me on Twitter:
-https://www.twitter.com/ishailesmishra
+https://www.twitter.com/ishailesh18
 
 ## ❤ ️Design Taken from:
 
