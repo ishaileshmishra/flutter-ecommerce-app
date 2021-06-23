@@ -1,21 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_ecommerce_app/src/view/home/HomePage.dart';
+import 'package:flutter_ecommerce_app/screen/home/home_page.dart';
+import 'package:get/get_navigation/src/root/get_material_app.dart';
 
-void main() {
-  runApp(EcommApp());
-}
-
-class EcommApp extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-        visualDensity: VisualDensity.adaptivePlatformDensity,
-      ),
-      home: HomePage(title: 'Login'),
-    );
-  }
-}
+void main() => runApp(GetMaterialApp(
+      home: HomePage(),
+    ));
