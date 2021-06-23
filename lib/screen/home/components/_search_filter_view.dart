@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import '../../../components/_border_radius.dart' show borderRadius;
+import 'package:flutter_ecommerce_app/components/_close_activity.dart';
 
 Row buildSearchRow() {
   return Row(
