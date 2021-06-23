@@ -1,6 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_ecommerce_app/screen/payment/components/_view_app_bar.dart';
 
 import '../../models/_payment_cart_model.dart';
 import '../../models/_res_files.dart';
@@ -10,6 +9,17 @@ class PaymentPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     List<PayCard> payemnts = Res.getPaymentTypes();
-    return Scaffold(appBar: gatewayAppBar(context), body: returnBody(payemnts));
+    payemnts.forEach((element) {
+      print(element.title);
+    });
+    return Scaffold(
+      appBar: payActionbar(),
+      body: Column(
+        children: [
+          creditcardImage(),
+          choosePaymentType(),
+        ],
+      ),
+    );
   }
 }

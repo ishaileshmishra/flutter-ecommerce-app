@@ -18,15 +18,13 @@ class _CartPageState extends State<CartPage> {
     return Scaffold(
         //backgroundColor: Colors.grey.shade200,
         appBar: buildAppBar(context),
-        body: Padding(
+        body: Container(
           padding: const EdgeInsets.all(10.0),
-          child: Expanded(
-            child: ListView.builder(
-              itemCount: products.length,
-              itemBuilder: (context, index) {
-                return buildCartCard(products[index]);
-              },
-            ),
+          child: ListView.builder(
+            itemCount: products.length,
+            itemBuilder: (context, index) {
+              return buildCartCard(products[index]);
+            },
           ),
         ));
   }

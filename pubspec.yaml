@@ -14,6 +14,7 @@ dependencies:
   google_fonts: ^1.1.0
   flutter_rating_bar: ^3.0.1+1
   smooth_star_rating: ^1.1.1
+  font_awesome_flutter: ^9.1.0
 
 dev_dependencies:
   flutter_test:
