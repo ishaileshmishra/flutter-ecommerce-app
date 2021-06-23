@@ -3,7 +3,6 @@ import 'component/_row_price_rating.dart';
 import 'component/_build_app_bar.dart';
 
 import '../../constant.dart';
-import '../../helper/_utils.dart';
 import '../../models/Product.dart';
 import 'component/_build_cart_btn.dart';
 import 'component/_image_view.dart';

@@ -12,21 +12,14 @@ class CartPage extends StatefulWidget {
 }
 
 class _CartPageState extends State<CartPage> {
-  List<Product> products;
-
-  @override
-  void initState() {
-    super.initState();
-    products = Res.fetchProducts();
-  }
-
   @override
   Widget build(BuildContext context) {
+    List<Product> products = Res.fetchProducts();
     return Scaffold(
-        backgroundColor: Colors.grey.shade200,
+        //backgroundColor: Colors.grey.shade200,
         appBar: buildAppBar(context),
         body: Padding(
-          padding: const EdgeInsets.all(8.0),
+          padding: const EdgeInsets.all(10.0),
           child: Expanded(
             child: ListView.builder(
               itemCount: products.length,

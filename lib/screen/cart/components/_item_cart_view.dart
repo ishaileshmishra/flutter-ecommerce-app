@@ -6,6 +6,7 @@ import '_card_img.dart';
 Card buildCartCard(product) {
   return Card(
     elevation: 0,
+    margin: EdgeInsets.all(10),
     child: Column(
       children: [
         Row(
