@@ -14,7 +14,6 @@ TextStyle normalText = GoogleFonts.ptSansCaption(
 
 TextStyle mediumText = GoogleFonts.ptSans(
   fontSize: 18,
-  fontWeight: FontWeight.bold,
 );
 
 TextStyle largeText = GoogleFonts.ptSans(

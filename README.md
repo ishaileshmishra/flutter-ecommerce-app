@@ -10,7 +10,7 @@ https://www.twitter.com/ishailesh18
 
 <img src="assets/srcn/design.png" width=730>
 
-## Screen Shots
+## screenshots
 
 <img src="assets/srcn/one.png" width=230> <img src="assets/srcn/two.png" width=230> <img src="assets/srcn/three.png" width=230>  
 
