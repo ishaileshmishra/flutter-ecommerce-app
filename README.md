@@ -21,7 +21,14 @@ https://www.instagram.com/ishaileshmishra
 <ul>
 <li>https://github.com/ishaileshmishra/flutter-feed-app</li>
 <li>https://github.com/ishaileshmishra/flutter_shopping_app</li>
-<li>https://github.com/ishaileshmishra/instagram_ui</li>
+<li>https://github.com/ishaileshmishra/instagram_ui</li>    
+<li>https://github.com/ishaileshmishra/flutter_developer_portfolio</li>
+<li>https://github.com/ishaileshmishra/instagram_reels_flutter</li>
+<li>https://github.com/ishaileshmishra/flutter_shopping_app</li>
+<li>https://github.com/ishaileshmishra/flutter-news-feed-app</li>
+<li>https://github.com/ishaileshmishra/flutter-ecommerce-cake-app</li>
+<li>https://github.com/ishaileshmishra/flutter-inventry-app</li>
+<li>https://github.com/ishaileshmishra/portfolio-app</li>
 </ul>
 
 ## API Information (under development)
