@@ -17,18 +17,27 @@ Hi 👋 I recently started with an e-commerce app and decided to share my explor
 
 <b>if you liked it, I'm sure you are going to like these also. visit below links</b>
 
-<ul>
-<li>https://github.com/ishaileshmishra/flutter-feed-app</li>
-<li>https://github.com/ishaileshmishra/flutter_shopping_app</li>
-<li>https://github.com/ishaileshmishra/instagram_ui</li>    
-<li>https://github.com/ishaileshmishra/flutter_developer_portfolio</li>
-<li>https://github.com/ishaileshmishra/instagram_reels_flutter</li>
-<li>https://github.com/ishaileshmishra/flutter_shopping_app</li>
-<li>https://github.com/ishaileshmishra/flutter-news-feed-app</li>
-<li>https://github.com/ishaileshmishra/flutter-ecommerce-cake-app</li>
-<li>https://github.com/ishaileshmishra/flutter-inventry-app</li>
-<li>https://github.com/ishaileshmishra/portfolio-app</li>
-</ul>
+
+[flutter-feed-app](https://github.com/ishaileshmishra/flutter-feed-app)
+
+[flutter_shopping_app](https://github.com/ishaileshmishra/flutter_shopping_app)
+
+[instagram_ui](https://github.com/ishaileshmishra/instagram_ui)
+
+[flutter_developer_portfolio](https://github.com/ishaileshmishra/flutter_developer_portfolio)
+
+[instagram_reels_flutter](https://github.com/ishaileshmishra/instagram_reels_flutter)
+
+[flutter_shopping_app](https://github.com/ishaileshmishra/flutter_shopping_app)
+
+[flutter_news_feed_app](https://github.com/ishaileshmishra/flutter-news-feed-app)
+
+[flutter-ecommerce_cake_app](https://github.com/ishaileshmishra/flutter-ecommerce-cake-app)
+    
+[flutter_inventry_app](https://github.com/ishaileshmishra/flutter-inventry-app)
+
+[portfolio_app](https://github.com/ishaileshmishra/portfolio-app)
+
 
 ## API Information (under development)
 
