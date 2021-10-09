@@ -1,9 +1,9 @@
 ## E-commerce application ui in flutter
 
-Hi 👋 I recently started with an E-commerce App and decided to share my exploration. I tried to make it sleek and according to latest design trends.
+Hi 👋 I recently started with an e-commerce app and decided to share my exploration. I tried to make it sleek and according to latest design trends.
 
 🥇Follow me on Twitter:
-https://www.twitter.com/findshailesh
+https://www.twitter.com/ishaileshmisra
 
 🥇Follow me on Instagram:
 https://www.instagram.com/ishaileshmishra
