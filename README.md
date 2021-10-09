@@ -2,9 +2,10 @@
 
 Hi 👋 I recently started with an e-commerce app and decided to share my exploration. I tried to make it sleek and according to latest design trends.
 
-🥇Follow 
+### Follow 
 
-[Twitter](https://www.twitter.com/ishaileshmisra):  [Instagram](https://www.instagram.com/ishaileshmishra)
+- [Twitter](https://www.twitter.com/ishaileshmisra)  
+- [Instagram](https://www.instagram.com/ishaileshmishra)
 
 ## screenshots
 
