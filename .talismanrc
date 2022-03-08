@@ -1,1 +1,5 @@
 threshold: medium
+
+fileignoreconfig:
+- filename: .dccache
+  checksum: f3399367041078d8213519458ba700b78f545ec27a659c82b5913421304e0261
