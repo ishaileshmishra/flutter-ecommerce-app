@@ -1,13 +1,13 @@
-## E-commerce application ui in flutter
+## E-ᑕOᗰᗰEᖇᑕE ᗩᑭᑭᒪIᑕᗩTIOᑎ ᑌI Iᑎ ᖴᒪᑌTTEᖇ
 
-Hi 👋 I recently started with an e-commerce app and decided to share my exploration. I tried to make it sleek and according to latest design trends.
+ᕼI 👋 I ᖇEᑕEᑎTᒪY STᗩᖇTEᗪ ᗯITᕼ ᗩᑎ E-ᑕOᗰᗰEᖇᑕE ᗩᑭᑭ ᗩᑎᗪ ᗪEᑕIᗪEᗪ TO SᕼᗩᖇE ᗰY E᙭ᑭᒪOᖇᗩTIOᑎ. I TᖇIEᗪ TO ᗰᗩKE IT SᒪEEK ᗩᑎᗪ ᗩᑕᑕOᖇᗪIᑎG TO ᒪᗩTEST ᗪESIGᑎ TᖇEᑎᗪS.
 
-### Follow 
+### ᖴOᒪᒪOᗯ 
 
 - [Twitter](https://www.twitter.com/ishaileshmisra)  
 - [Instagram](https://www.instagram.com/ishaileshmishra)
 
-## screenshots
+## SᑕᖇEEᑎSᕼOTS
 
 <img src="assets/srcn/one.png" width=230> <img src="assets/srcn/two.png" width=230> <img src="assets/srcn/three.png" width=230>  
 
@@ -15,7 +15,7 @@ Hi 👋 I recently started with an e-commerce app and decided to share my explor
 
 
 
-<b>if you liked it, I'm sure you are going to like these also. visit below links</b>
+<b>Iᖴ YOᑌ ᒪIKEᗪ IT, I'ᗰ SᑌᖇE YOᑌ ᗩᖇE GOIᑎG TO ᒪIKE TᕼESE ᗩᒪSO. ᐯISIT ᗷEᒪOᗯ ᒪIᑎKS</b>
 
 
 [flutter-feed-app](https://github.com/ishaileshmishra/flutter-feed-app)
