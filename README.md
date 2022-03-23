@@ -39,7 +39,7 @@
 [portfolio_app](https://github.com/ishaileshmishra/portfolio-app)
 
 
-## API Information (under development)
+## ᗩᑭI IᑎᖴOᖇᗰᗩTIOᑎ (ᑌᑎᗪEᖇ ᗪEᐯEᒪOᑭᗰEᑎT)
 
 Need some help? Drop a message to me
 <table>
