@@ -1,5 +1,4 @@
 import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
 import 'package:flutter_ecommerce_app/screen/login/login_page.dart';
 import 'package:get/get.dart';
 

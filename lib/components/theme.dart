@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_ecommerce_app/constant.dart';
 
 ThemeData theme() {
@@ -14,14 +15,16 @@ ThemeData theme() {
 
 AppBarTheme appBarTheme() {
   return AppBarTheme(
-    color: Colors.white,
-    elevation: 0,
-    brightness: Brightness.light,
-    iconTheme: IconThemeData(color: Colors.black),
-    textTheme: TextTheme(
-      headline6: TextStyle(color: Color(0XFF8B8B8B), fontSize: 18),
-    ),
-  );
+      color: Colors.white,
+      elevation: 0,
+      systemOverlayStyle: SystemUiOverlayStyle.light,
+      iconTheme: IconThemeData(color: Colors.black),
+      textTheme: TextTheme(
+        headline6: TextStyle(
+          color: Colors.white, fontSize: 18,
+          //TextStyle(color: Color(0XFF8B8B8B), fontSize: 18),
+        ),
+      ));
 }
 
 TextTheme textTheme() {

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_ecommerce_app/models/Product.dart';
 import 'package:flutter_ecommerce_app/screen/details/detail_page.dart';
-import 'package:get/instance_manager.dart';
 import 'package:get/get.dart';
 
 buildPopularCard(Product product) {

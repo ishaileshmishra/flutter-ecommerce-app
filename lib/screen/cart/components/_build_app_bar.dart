@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter_ecommerce_app/components/_close_activity.dart';
 import 'package:get/get.dart';
 import 'package:flutter/material.dart';
