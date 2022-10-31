@@ -1,16 +1,54 @@
-# flutter_ecommerce_app
+# E-ᑕOᗰᗰEᖇᑕE ᗩᑭᑭᒪIᑕᗩTIOᑎ ᑌI Iᑎ ᖴᒪᑌTTEᖇ
 
-A new Flutter project.
+ᕼI 👋 I ᖇEᑕEᑎTᒪY STᗩᖇTEᗪ ᗯITᕼ ᗩᑎ E-ᑕOᗰᗰEᖇᑕE ᗩᑭᑭ ᗩᑎᗪ ᗪEᑕIᗪEᗪ TO SᕼᗩᖇE ᗰY E᙭ᑭᒪOᖇᗩTIOᑎ. I TᖇIEᗪ TO ᗰᗩKE IT SᒪEEK ᗩᑎᗪ ᗩᑕᑕOᖇᗪIᑎG TO ᒪᗩTEST ᗪESIGᑎ TᖇEᑎᗪS.
 
-## Getting Started
+## ᖴOᒪᒪOᗯ
 
-This project is a starting point for a Flutter application.
+- [Twitter](https://www.twitter.com/ishaileshmisra)
+- [Instagram](https://www.instagram.com/ishaileshmishra)
 
-A few resources to get you started if this is your first Flutter project:
+## SᑕᖇEEᑎSᕼOTS
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+<img src="assets/srcn/one.png" width=230> <img src="assets/srcn/two.png" width=230> <img src="assets/srcn/three.png" width=230>
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+<img src="assets/srcn/four.png" width=230> <img src="assets/srcn/five.png" width=230> <img src="assets/srcn/six.png" width=230>
+
+<b>Iᖴ YOᑌ ᒪIKEᗪ IT, I'ᗰ SᑌᖇE YOᑌ ᗩᖇE GOIᑎG TO ᒪIKE TᕼESE ᗩᒪSO. ᐯISIT ᗷEᒪOᗯ ᒪIᑎKS</b>
+
+[flutter-feed-app](https://github.com/ishaileshmishra/flutter-feed-app)
+
+[flutter_shopping_app](https://github.com/ishaileshmishra/flutter_shopping_app)
+
+[instagram_ui](https://github.com/ishaileshmishra/instagram_ui)
+
+[flutter_developer_portfolio](https://github.com/ishaileshmishra/flutter_developer_portfolio)
+
+[instagram_reels_flutter](https://github.com/ishaileshmishra/instagram_reels_flutter)
+
+[flutter_shopping_app](https://github.com/ishaileshmishra/flutter_shopping_app)
+
+[flutter_news_feed_app](https://github.com/ishaileshmishra/flutter-news-feed-app)
+
+[flutter-ecommerce_cake_app](https://github.com/ishaileshmishra/flutter-ecommerce-cake-app)
+
+[flutter_inventry_app](https://github.com/ishaileshmishra/flutter-inventry-app)
+
+[portfolio_app](https://github.com/ishaileshmishra/portfolio-app)
+
+## ᗩᑭI IᑎᖴOᖇᗰᗩTIOᑎ (ᑌᑎᗪEᖇ ᗪEᐯEᒪOᑭᗰEᑎT)
+
+Need some help? Drop a message to me
+
+<table>
+    <tr>
+        <td>mshaileshr@gmail.com</td>
+    </tr>
+</table>
+
+<table>
+    <tr>
+        <td>Download APK</td>
+    </tr>
+</table>
+
+[Click To Download](https://github.com/ishaileshmishra/jin_ecomm/blob/master/assets/apk/app-release.apk?raw=true)
