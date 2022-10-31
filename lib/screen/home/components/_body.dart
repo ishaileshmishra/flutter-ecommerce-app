@@ -11,18 +11,18 @@ Column detailBody(List<Product> products, BuildContext context) {
     crossAxisAlignment: CrossAxisAlignment.center,
     children: [
       buildActionBar(),
-      SizedBox(height: kSpace),
+      const SizedBox(height: kSpace),
       buildSearchRow(),
-      SizedBox(height: kSpace),
+      const SizedBox(height: kSpace),
       section('Categories'),
-      SizedBox(height: kSpace),
-      Container(
+      const SizedBox(height: kSpace),
+      SizedBox(
         height: 140,
         child: category(products),
       ),
-      SizedBox(height: kSpace),
+      const SizedBox(height: kSpace),
       section('Most popular'),
-      SizedBox(height: kSpace),
+      const SizedBox(height: kSpace),
       Expanded(child: mostPopularCategory(context, products))
     ],
   );

@@ -7,7 +7,7 @@ Row buildRowPriceRating(product) {
     mainAxisAlignment: MainAxisAlignment.spaceBetween,
     children: [
       Text("Price: \$${product.price}",
-          style: TextStyle(
+          style: const TextStyle(
             fontSize: 22,
             fontWeight: FontWeight.bold,
             color: Colors.white,

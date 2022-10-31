@@ -7,12 +7,12 @@ import '_build_popular_card.dart';
 
 ListView category(productList) {
   return ListView.builder(
-      padding: EdgeInsets.only(left: 0),
+      padding: const EdgeInsets.only(left: 0),
       itemCount: productList.length,
       scrollDirection: Axis.horizontal,
       itemBuilder: (BuildContext context, int index) {
         return GestureDetector(
-          onTap: () => {Get.to(ProductDetail())},
+          onTap: () => {Get.to(ProductDetail)},
           child: buildPopularCard(productList[index]),
         );
       });

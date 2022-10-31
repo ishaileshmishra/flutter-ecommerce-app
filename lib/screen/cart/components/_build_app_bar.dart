@@ -7,11 +7,11 @@ AppBar buildAppBar(BuildContext context) {
   return AppBar(
     elevation: 0,
     leading: closeActivity(),
-    title: Text("Cart", style: TextStyle(color: Colors.black)),
+    title: const Text("Cart", style: TextStyle(color: Colors.black)),
     backgroundColor: Colors.grey.shade100,
     actions: [
       Container(
-        padding: EdgeInsets.all(10),
+        padding: const EdgeInsets.all(10),
         child: buildGoPaymentBtn(context),
       ),
     ],
@@ -20,8 +20,8 @@ AppBar buildAppBar(BuildContext context) {
 
 OutlinedButton buildGoPaymentBtn(BuildContext context) {
   return OutlinedButton(
-      child: Text('Payment'),
       style: OutlinedButton.styleFrom(
-          animationDuration: Duration(seconds: 5), padding: EdgeInsets.all(10)),
-      onPressed: () => Get.to(() => PaymentPage()));
+          animationDuration: const Duration(seconds: 5), padding: const EdgeInsets.all(10)),
+      onPressed: () => Get.to(() => PaymentPage()),
+      child: const Text('Payment'));
 }

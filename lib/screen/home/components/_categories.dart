@@ -5,10 +5,10 @@ Row section(title) {
     children: [
       Text(
         title,
-        style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+        style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
       ),
-      Spacer(),
-      Icon(Icons.arrow_forward)
+      const Spacer(),
+      const Icon(Icons.arrow_forward)
     ],
   );
 }

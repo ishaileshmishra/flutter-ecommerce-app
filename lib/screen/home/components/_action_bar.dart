@@ -5,14 +5,14 @@ import 'package:get/get.dart';
 Row buildActionBar() {
   return Row(
     children: [
-      Text(
+      const Text(
         'Discover',
         style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
       ),
-      Spacer(),
+      const Spacer(),
       GestureDetector(
-        onTap: () => Get.to(LoginScreen()),
-        child: Icon(
+        onTap: () => Get.to(const LoginScreen()),
+        child: const Icon(
           CupertinoIcons.profile_circled,
           size: 45,
         ),

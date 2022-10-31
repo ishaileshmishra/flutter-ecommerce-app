@@ -4,7 +4,7 @@ import '../../../models/Product.dart';
 
 buildCard(Product product) {
   return Padding(
-    padding: EdgeInsets.all(2),
+    padding: const EdgeInsets.all(2),
     child: Card(
       elevation: 4,
       child: Container(
@@ -14,7 +14,7 @@ buildCard(Product product) {
         ),
         child: GridTile(
           header: Padding(
-            padding: EdgeInsets.all(12),
+            padding: const EdgeInsets.all(12),
             child: imageIcon(product),
           ),
           footer: _buildPriceRating(product),
@@ -27,12 +27,12 @@ buildCard(Product product) {
 
 Padding _buildPriceRating(Product product) {
   return Padding(
-    padding: EdgeInsets.all(10),
+    padding: const EdgeInsets.all(10),
     child: Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         _titlePrice(product),
-        SizedBox(height: 8),
+        const SizedBox(height: 8),
         showStarRating(3.0, product.color)
       ],
     ),
@@ -51,14 +51,14 @@ Row _titlePrice(Product product) {
     children: [
       Text(
         product.title,
-        style: TextStyle(
+        style: const TextStyle(
           fontWeight: FontWeight.bold,
         ),
       ),
-      Spacer(),
+      const Spacer(),
       Text(
         '\$ ${product.price}',
-        style: TextStyle(
+        style: const TextStyle(
           fontWeight: FontWeight.bold,
           color: Colors.blue,
         ),

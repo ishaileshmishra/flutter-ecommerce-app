@@ -6,13 +6,13 @@ import '_card_img.dart';
 Card buildCartCard(product) {
   return Card(
     elevation: 4,
-    margin: EdgeInsets.all(10),
+    margin: const EdgeInsets.all(10),
     child: Column(
       children: [
         Row(
           children: [
             cardImage(product),
-            SizedBox(width: kSpace),
+            const SizedBox(width: kSpace),
             Expanded(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -30,16 +30,16 @@ Card buildCartCard(product) {
                     "Color: Yellow",
                     style: smallText,
                   ),
-                  SizedBox(height: kSpace),
+                  const SizedBox(height: kSpace),
                   _cartPriceDescriptionRightToImg(product),
                 ],
               ),
             )
           ],
         ),
-        Divider(color: Colors.grey),
+        const Divider(color: Colors.grey),
         Padding(
-          padding: EdgeInsets.all(kSpace),
+          padding: const EdgeInsets.all(kSpace),
           child: Column(
             children: [
               _viewSubtotal(product),
@@ -62,11 +62,11 @@ Row _cartPriceDescriptionRightToImg(product) {
       Row(
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
-          Icon(Icons.add_circle),
-          SizedBox(width: kSpace),
+          const Icon(Icons.add_circle),
+          const SizedBox(width: kSpace),
           Text("1", style: mediumText),
-          SizedBox(width: kSpace),
-          Icon(Icons.remove_circle),
+          const SizedBox(width: kSpace),
+          const Icon(Icons.remove_circle),
         ],
       )
     ],

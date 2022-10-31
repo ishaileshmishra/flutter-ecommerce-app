@@ -3,5 +3,6 @@ class PayCard {
   String description;
   String image;
 
-  PayCard({this.title, this.description, this.image});
+  PayCard(
+      {required this.title, required this.description, required this.image});
 }

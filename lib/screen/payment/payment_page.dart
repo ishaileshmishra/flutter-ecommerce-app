@@ -8,9 +8,9 @@ class PaymentPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     List<PayCard> payemnts = Res.getPaymentTypes();
-    payemnts.forEach((element) {
-      print(element.title);
-    });
+    for (var element in payemnts) {
+      //print(element.title);
+    }
     return Scaffold(
       appBar: payActionbar(),
       body: Column(

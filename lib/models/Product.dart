@@ -1,4 +1,5 @@
-import 'package:flutter/cupertino.dart';
+// ignore: file_names
+import 'package:flutter/material.dart';
 
 class Product {
   Color color;
@@ -12,13 +13,13 @@ class Product {
   String info;
 
   Product(
-      {this.color,
-      this.title,
-      this.image,
-      this.price,
-      this.tag,
-      this.description,
-      this.size,
-      this.count,
-      this.info});
+      {required this.color,
+      required this.title,
+      required this.image,
+      required this.price,
+      required this.tag,
+      required this.description,
+      required this.size,
+      required this.count,
+      required this.info});
 }

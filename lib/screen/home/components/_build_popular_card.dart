@@ -5,7 +5,7 @@ import 'package:get/get.dart';
 
 buildPopularCard(Product product) {
   return Padding(
-      padding: EdgeInsets.all(2),
+      padding: const EdgeInsets.all(2),
       child: GestureDetector(
         onTap: () {
           Get.to(ProductDetail(product: product));
@@ -23,7 +23,7 @@ Card _productCard(Product product) {
         children: [
           _imageIcon(product),
           Padding(
-            padding: EdgeInsets.symmetric(horizontal: 8),
+            padding: const EdgeInsets.symmetric(horizontal: 8),
             child: _title(product),
           ),
         ],
@@ -35,7 +35,7 @@ Card _productCard(Product product) {
 Text _title(Product product) {
   return Text(
     product.title,
-    style: TextStyle(
+    style: const TextStyle(
       fontWeight: FontWeight.bold,
       color: Colors.white,
     ),
@@ -46,7 +46,7 @@ Container _imageIcon(Product product) {
   return Container(
     height: 100,
     width: 120,
-    padding: EdgeInsets.all(20),
+    padding: const EdgeInsets.all(20),
     child: Image.asset(
       product.image,
       fit: BoxFit.cover,

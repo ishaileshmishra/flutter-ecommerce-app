@@ -3,7 +3,7 @@ import 'package:flutter_ecommerce_app/screen/home/components/_body.dart';
 import '../../models/_res_files.dart';
 
 class HomePage extends StatelessWidget {
-  const HomePage({Key key}) : super(key: key);
+  const HomePage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -12,7 +12,7 @@ class HomePage extends StatelessWidget {
       backgroundColor: Colors.grey.shade200,
       body: SafeArea(
         child: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 15),
+          padding: const EdgeInsets.symmetric(horizontal: 15),
           child: detailBody(products, context),
         ),
       ),

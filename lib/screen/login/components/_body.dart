@@ -17,34 +17,32 @@ Stack loginBody(context) {
       )),
       Center(
         child: Center(
-          child: Container(
-            //width: deviceWidth * .80,
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
-                _iconThumbnail(),
-                SizedBox(height: kSpace),
-                Container(
-                  width: deviceWidth * .80,
-                  child: imputFieldLogin('Username'),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              _iconThumbnail(),
+              const SizedBox(height: kSpace),
+              SizedBox(
+                width: deviceWidth * .80,
+                child: imputFieldLogin('Username'),
+              ),
+              const SizedBox(height: 20),
+              SizedBox(
+                width: deviceWidth * .80,
+                child: imputFieldLogin('Password'),
+              ),
+              const SizedBox(height: 20),
+              Container(
+                width: (deviceWidth * .50) * .50,
+                color: Colors.white,
+                height: 45,
+                child: OutlinedButton(
+                  //onPressed: () => print('Login btn tapped'),
+                  onPressed: () {},
+                  child: const Text('Login'),
                 ),
-                SizedBox(height: 20),
-                Container(
-                  width: deviceWidth * .80,
-                  child: imputFieldLogin('Password'),
-                ),
-                SizedBox(height: 20),
-                Container(
-                  width: (deviceWidth * .50) * .50,
-                  color: Colors.white,
-                  height: 45,
-                  child: OutlinedButton(
-                    onPressed: () => print('Login btn tapped'),
-                    child: Text('Login'),
-                  ),
-                )
-              ],
-            ),
+              )
+            ],
           ),
         ),
       ),
@@ -53,14 +51,14 @@ Stack loginBody(context) {
 }
 
 BoxDecoration boxGradientDecoration() {
-  return new BoxDecoration(
-    gradient: new LinearGradient(
+  return const BoxDecoration(
+    gradient: LinearGradient(
         colors: [
           kPrimaryColor,
           kPrimaryLightColor,
         ],
-        begin: const FractionalOffset(0.0, 0.0),
-        end: const FractionalOffset(1.0, 0.0),
+        begin: FractionalOffset(0.0, 0.0),
+        end: FractionalOffset(1.0, 0.0),
         stops: [0.0, 1.0],
         tileMode: TileMode.clamp),
   );
@@ -68,7 +66,8 @@ BoxDecoration boxGradientDecoration() {
 
 CustomInputField imputFieldLogin(field) {
   return CustomInputField(
-    Icon(
+    null,
+    const Icon(
       Icons.person,
       color: Colors.redAccent,
       size: 30,

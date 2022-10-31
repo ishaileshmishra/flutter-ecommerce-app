@@ -7,28 +7,28 @@ import '../../../constant.dart';
 
 Container choosePaymentType() {
   return Container(
-    padding: EdgeInsets.symmetric(horizontal: 30),
+    padding: const EdgeInsets.symmetric(horizontal: 30),
     child: Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(
+        const Text(
           'Choose payemnt method',
           style: TextStyle(
               color: Colors.black, fontWeight: FontWeight.bold, fontSize: 16),
         ),
-        SizedBox(height: 20),
+        const SizedBox(height: 20),
         paymenOptions(),
-        SizedBox(height: 30),
-        Text(
+        const SizedBox(height: 30),
+        const Text(
           'Promo Code',
           style: TextStyle(
               color: Colors.black, fontWeight: FontWeight.bold, fontSize: 16),
         ),
-        SizedBox(height: 20),
+        const SizedBox(height: 20),
         promoCodeWidget(),
-        SizedBox(height: 120),
+        const SizedBox(height: 120),
         Row(
-          children: [
+          children: const [
             Text(
               'Total payment',
               style: TextStyle(color: Colors.black, fontSize: 16),
@@ -43,8 +43,8 @@ Container choosePaymentType() {
             ),
           ],
         ),
-        SizedBox(height: 30),
-        Container(
+        const SizedBox(height: 30),
+        SizedBox(
           height: 45,
           width: double.infinity,
           child: OutlinedButton(
@@ -57,9 +57,9 @@ Container choosePaymentType() {
             ),
             onPressed: () {
               Get.snackbar("Processing", 'Payment is processing',
-                  animationDuration: Duration(seconds: 2));
+                  animationDuration: const Duration(seconds: 2));
             },
-            child: Text(
+            child: const Text(
               'PAY',
               style: TextStyle(color: Colors.white),
             ),
@@ -73,7 +73,7 @@ Container choosePaymentType() {
 Row paymenOptions() {
   return Row(
     mainAxisAlignment: MainAxisAlignment.spaceBetween,
-    children: [
+    children: const [
       CircleAvatar(
           maxRadius: 25, child: FaIcon(FontAwesomeIcons.amazonPay, size: 35)),
       FaIcon(FontAwesomeIcons.ccVisa, size: 35),
@@ -86,9 +86,9 @@ Row paymenOptions() {
 
 Padding creditcardImage() {
   return Padding(
-    padding: EdgeInsets.all(30),
+    padding: const EdgeInsets.all(30),
     child: Container(
-      padding: EdgeInsets.all(20),
+      padding: const EdgeInsets.all(20),
       height: 200,
       width: double.infinity,
       decoration: creditcardDecoration(),
@@ -112,7 +112,7 @@ Container promoCodeWidget() {
     clipBehavior: Clip.none,
     decoration: BoxDecoration(
         color: Colors.grey.shade300,
-        borderRadius: BorderRadius.all(Radius.circular(20))),
+        borderRadius: const BorderRadius.all(Radius.circular(20))),
     child: Align(
       alignment: Alignment.centerRight,
       child: OutlinedButton(
@@ -121,10 +121,10 @@ Container promoCodeWidget() {
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(18.0),
           ),
-          side: BorderSide(width: 2, color: Colors.black),
+          side: const BorderSide(width: 2, color: Colors.black),
         ),
         onPressed: () {},
-        child: Text(
+        child: const Text(
           'Apply',
           style: TextStyle(color: Colors.white),
         ),
@@ -137,23 +137,23 @@ Column creditCardView() {
   return Column(
     crossAxisAlignment: CrossAxisAlignment.start,
     children: [
-      Text(
+      const Text(
         'Credit Card',
         style: TextStyle(
           color: Colors.white,
         ),
       ),
-      Spacer(),
-      Text(
+      const Spacer(),
+      const Text(
         '3763 4367 7346 0046',
         style: TextStyle(
           color: Colors.white,
           fontSize: 18,
         ),
       ),
-      SizedBox(height: kSpace),
+      const SizedBox(height: kSpace),
       Row(
-        children: [
+        children: const [
           Text(
             'Shailesh Mishra',
             style: TextStyle(
@@ -173,7 +173,7 @@ Column creditCardView() {
 BoxDecoration creditcardDecoration() {
   return BoxDecoration(
       color: Colors.grey.shade800,
-      borderRadius: BorderRadius.all(
+      borderRadius: const BorderRadius.all(
         Radius.circular(20),
       ));
 }

@@ -1,14 +1,17 @@
 import 'package:flutter/material.dart';
-import 'component/_row_price_rating.dart';
-import 'component/_build_app_bar.dart';
 
 import '../../constant.dart';
 import '../../models/Product.dart';
+import 'component/_build_app_bar.dart';
 import 'component/_build_cart_btn.dart';
 import 'component/_image_view.dart';
+import 'component/_row_price_rating.dart';
 
 class ProductDetail extends StatelessWidget {
-  ProductDetail({Key key, this.product}) : super(key: key);
+  const ProductDetail({
+    Key? key,
+    required this.product,
+  }) : super(key: key);
 
   final Product product;
 
@@ -19,7 +22,7 @@ class ProductDetail extends StatelessWidget {
       body: Stack(
         children: [
           showImageView(context, product),
-          SizedBox(height: kSpace),
+          const SizedBox(height: kSpace),
           Positioned(
             bottom: 50,
             left: 20,
@@ -28,15 +31,15 @@ class ProductDetail extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 buildRowPriceRating(product),
-                SizedBox(height: kSpace),
+                const SizedBox(height: kSpace),
                 Text(
                   product.description,
                   textAlign: TextAlign.justify,
                   overflow: TextOverflow.ellipsis,
-                  style: TextStyle(fontSize: 16.0, color: Colors.white),
+                  style: const TextStyle(fontSize: 16.0, color: Colors.white),
                   maxLines: 5,
                 ),
-                SizedBox(height: 20),
+                const SizedBox(height: 20),
                 Center(child: btnAddToCart(context, product)),
               ],
             ),

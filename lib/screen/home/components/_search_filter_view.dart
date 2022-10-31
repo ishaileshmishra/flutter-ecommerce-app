@@ -7,7 +7,7 @@ Row buildSearchRow() {
     mainAxisAlignment: MainAxisAlignment.spaceBetween,
     children: [
       Expanded(child: _showTextField()),
-      SizedBox(width: 20),
+      const SizedBox(width: 20),
       Container(
         color: Colors.grey.shade300,
         height: 45,
@@ -21,15 +21,15 @@ Row buildSearchRow() {
 _showTextField() {
   return TextField(
     decoration: InputDecoration(
-        suffixIcon: Icon(Icons.search),
+        suffixIcon: const Icon(Icons.search),
         focusedBorder: InputBorder.none,
         enabledBorder: InputBorder.none,
-        border: OutlineInputBorder(
+        border: const OutlineInputBorder(
           gapPadding: 8,
           borderRadius: borderRadius,
         ),
         filled: true,
-        hintStyle: new TextStyle(color: Colors.grey[800]),
+        hintStyle: TextStyle(color: Colors.grey[800]),
         hintText: "Search products",
         fillColor: Colors.grey.shade300),
   );
@@ -38,11 +38,11 @@ _showTextField() {
 IconButton _buildFilterBtn() {
   return IconButton(
     alignment: Alignment.center,
-    icon: Icon(CupertinoIcons.sort_down, size: 20),
+    icon: const Icon(CupertinoIcons.sort_down, size: 20),
     onPressed: () => print("Filter clicked"),
     tooltip: "Filter",
     iconSize: 35,
-    padding: EdgeInsets.all(10),
+    padding: const EdgeInsets.all(10),
     color: Colors.teal,
   );
 }

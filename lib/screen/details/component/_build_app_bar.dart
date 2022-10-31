@@ -8,14 +8,14 @@ AppBar detailAppBar(product) {
     backgroundColor: product.color,
     title: Text(
       product.title,
-      style: TextStyle(
+      style: const TextStyle(
         color: Colors.white,
         fontWeight: FontWeight.bold,
       ),
     ),
     leading: closeActivity(),
     centerTitle: true,
-    actions: [
+    actions: const [
       Padding(
         padding: EdgeInsets.all(8),
         child: CircleAvatar(
