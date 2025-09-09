@@ -6,7 +6,7 @@ The goal was to create a modern and sleek design inspired by the latest design t
 ---
 
 ## 📌 Follow Me
-- [Twitter](https://www.twitter.com/ishaileshmisra)  
+- [Twitter](https://www.twitter.com/shaileshtalks)  
 - [Instagram](https://www.instagram.com/ishaileshmishra)  
 
 ---
