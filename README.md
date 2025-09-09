@@ -22,7 +22,7 @@ The goal was to create a modern and sleek design inspired by the latest design t
 <p align="center">
   <img src="assets/srcn/four.png" width="230">
   <img src="assets/srcn/five.png" width="230">
-  <img src="assets/srcn/six.png" width="230">
+<!--   <img src="assets/srcn/six.png" width="230"> -->
 </p>
 
 ---
