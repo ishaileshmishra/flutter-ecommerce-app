@@ -1,54 +1,58 @@
-# E-ᑕOᗰᗰEᖇᑕE ᗩᑭᑭᒪIᑕᗩTIOᑎ ᑌI Iᑎ ᖴᒪᑌTTEᖇ
+# E-Commerce Application UI in Flutter
 
-ᕼI 👋 I ᖇEᑕEᑎTᒪY STᗩᖇTEᗪ ᗯITᕼ ᗩᑎ E-ᑕOᗰᗰEᖇᑕE ᗩᑭᑭ ᗩᑎᗪ ᗪEᑕIᗪEᗪ TO SᕼᗩᖇE ᗰY E᙭ᑭᒪOᖇᗩTIOᑎ. I TᖇIEᗪ TO ᗰᗩKE IT SᒪEEK ᗩᑎᗪ ᗩᑕᑕOᖇᗪIᑎG TO ᒪᗩTEST ᗪESIGᑎ TᖇEᑎᗪS.
+This is a simple exploration project where I built an e-commerce app UI using **Flutter**.  
+The goal was to create a modern and sleek design inspired by the latest design trends.  
 
-## ᖴOᒪᒪOᗯ
+---
 
-- [Twitter](https://www.twitter.com/ishaileshmisra)
-- [Instagram](https://www.instagram.com/ishaileshmishra)
+## 📌 Follow Me
+- [Twitter](https://www.twitter.com/ishaileshmisra)  
+- [Instagram](https://www.instagram.com/ishaileshmishra)  
 
-## SᑕᖇEEᑎSᕼOTS
+---
 
-<img src="assets/srcn/one.png" width=230> <img src="assets/srcn/two.png" width=230> <img src="assets/srcn/three.png" width=230>
+## 📸 Screenshots  
 
-<img src="assets/srcn/four.png" width=230> <img src="assets/srcn/five.png" width=230> <img src="assets/srcn/six.png" width=230>
+<p align="center">
+  <img src="assets/srcn/one.png" width="230">
+  <img src="assets/srcn/two.png" width="230">
+  <img src="assets/srcn/three.png" width="230">
+</p>
 
-<b>Iᖴ YOᑌ ᒪIKEᗪ IT, I'ᗰ SᑌᖇE YOᑌ ᗩᖇE GOIᑎG TO ᒪIKE TᕼESE ᗩᒪSO. ᐯISIT ᗷEᒪOᗯ ᒪIᑎKS</b>
+<p align="center">
+  <img src="assets/srcn/four.png" width="230">
+  <img src="assets/srcn/five.png" width="230">
+  <img src="assets/srcn/six.png" width="230">
+</p>
 
-[flutter-feed-app](https://github.com/ishaileshmishra/flutter-feed-app)
+---
 
-[flutter_shopping_app](https://github.com/ishaileshmishra/flutter_shopping_app)
+## 🔗 More Flutter Projects  
 
-[instagram_ui](https://github.com/ishaileshmishra/instagram_ui)
+If you like this project, you might also enjoy these:  
 
-[flutter_developer_portfolio](https://github.com/ishaileshmishra/flutter_developer_portfolio)
+- [Flutter Feed App](https://github.com/ishaileshmishra/flutter-feed-app)  
+- [Flutter Shopping App](https://github.com/ishaileshmishra/flutter_shopping_app)  
+- [Instagram UI](https://github.com/ishaileshmishra/instagram_ui)  
+- [Flutter Developer Portfolio](https://github.com/ishaileshmishra/flutter_developer_portfolio)  
+- [Instagram Reels Flutter](https://github.com/ishaileshmishra/instagram_reels_flutter)  
+- [Flutter News Feed App](https://github.com/ishaileshmishra/flutter-news-feed-app)  
+- [Flutter E-commerce Cake App](https://github.com/ishaileshmishra/flutter-ecommerce-cake-app)  
+- [Flutter Inventory App](https://github.com/ishaileshmishra/flutter-inventry-app)  
+- [Portfolio App](https://github.com/ishaileshmishra/portfolio-app)  
 
-[instagram_reels_flutter](https://github.com/ishaileshmishra/instagram_reels_flutter)
+---
 
-[flutter_shopping_app](https://github.com/ishaileshmishra/flutter_shopping_app)
+## ⚙️ API Information (In Progress)
 
-[flutter_news_feed_app](https://github.com/ishaileshmishra/flutter-news-feed-app)
+This project is currently under development.  
+For any questions, feel free to reach out:
 
-[flutter-ecommerce_cake_app](https://github.com/ishaileshmishra/flutter-ecommerce-cake-app)
+📧 **Email:** mshaileshr@gmail.com  
 
-[flutter_inventry_app](https://github.com/ishaileshmishra/flutter-inventry-app)
+---
 
-[portfolio_app](https://github.com/ishaileshmishra/portfolio-app)
+## 📥 Download APK  
 
-## ᗩᑭI IᑎᖴOᖇᗰᗩTIOᑎ (ᑌᑎᗪEᖇ ᗪEᐯEᒪOᑭᗰEᑎT)
-
-Need some help? Drop a message to me
-
-<table>
-    <tr>
-        <td>mshaileshr@gmail.com</td>
-    </tr>
-</table>
-
-<table>
-    <tr>
-        <td>Download APK</td>
-    </tr>
-</table>
-
-[Click To Download](https://github.com/ishaileshmishra/jin_ecomm/blob/master/assets/apk/app-release.apk?raw=true)
+You can try the app directly by downloading the APK:  
+[Download Here](https://github.com/ishaileshmishra/jin_ecomm/blob/master/assets/apk/app-release.apk?raw=true)  
